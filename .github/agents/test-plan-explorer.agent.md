@@ -120,7 +120,7 @@ Output Format
   - Title and revision info
   - Table of contents
   - Scenario sections with numbered steps and expected outcomes
-  You don't need permission to create or edit files in specs/; just create or overwrite as required.
+  You don't need permission to create or #editFiles in specs/; just create or #edit as required.
 
 Example Scenario Template (to use when refining specs/)
 - Title: [Feature] – [Action/Outcome]
