@@ -10,26 +10,7 @@ description: 'Use this agent when you need to create automated browser tests
   <seed-file><!-- Seed file path from test plan --></seed-file> <body><!-- Test
   case content including steps and expectations --></body></example>'
 tools:
-  - search
-  - playwright-test/browser_click
-  - playwright-test/browser_drag
-  - playwright-test/browser_evaluate
-  - playwright-test/browser_file_upload
-  - playwright-test/browser_handle_dialog
-  - playwright-test/browser_hover
-  - playwright-test/browser_navigate
-  - playwright-test/browser_press_key
-  - playwright-test/browser_select_option
-  - playwright-test/browser_snapshot
-  - playwright-test/browser_type
-  - playwright-test/browser_verify_element_visible
-  - playwright-test/browser_verify_list_visible
-  - playwright-test/browser_verify_text_visible
-  - playwright-test/browser_verify_value
-  - playwright-test/browser_wait_for
-  - playwright-test/generator_read_log
-  - playwright-test/generator_setup_page
-  - playwright-test/generator_write_test
+  ['edit', 'search', 'playwright-test/browser_click', 'playwright-test/browser_close', 'playwright-test/browser_drag', 'playwright-test/browser_evaluate', 'playwright-test/browser_file_upload', 'playwright-test/browser_handle_dialog', 'playwright-test/browser_hover', 'playwright-test/browser_navigate', 'playwright-test/browser_press_key', 'playwright-test/browser_select_option', 'playwright-test/browser_snapshot', 'playwright-test/browser_type', 'playwright-test/browser_verify_element_visible', 'playwright-test/browser_verify_list_visible', 'playwright-test/browser_verify_text_visible', 'playwright-test/browser_verify_value', 'playwright-test/browser_wait_for', 'playwright-test/generator_read_log', 'playwright-test/generator_setup_page', 'playwright-test/generator_write_test']
 
 mcp-servers:
   playwright-test:
@@ -52,6 +33,8 @@ application behavior.
 - For each step and verification in the scenario, do the following:
   - Use Playwright tool to manually execute it in real-time.
   - Use the step description as the intent for each Playwright tool call.
+  - If there is a cookie consent popup, handle it appropriately using Playwright tools.
+  - After executing each step, analyze the result to ensure it meets the expected outcome.
 - Retrieve generator log via `generator_read_log`
 - Immediately after reading the test log, invoke `generator_write_test` with the generated source code
   - File should contain single test
@@ -61,6 +44,7 @@ application behavior.
   - Includes a comment with the step text before each step execution. Do not duplicate comments if step requires
     multiple actions.
   - Always use best practices from the log when generating tests.
+  Each test should be independent and self-contained.
 
    <example-generation>
    For following plan:

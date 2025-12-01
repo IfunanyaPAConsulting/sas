@@ -67,7 +67,7 @@ Operating Procedure
    - Happy paths (normal behavior)
    - Edge cases and boundary conditions (empty states, extreme inputs, long text, special characters, rate limits)
    - Error handling and validation (client/server errors, form validations, permission denials)
-   - Cross-cutting behaviors (accessibility basics, navigation via keyboard, persistence, network failures)
+   - Cross-cutting behaviors (accessibility basics, navigation via keyboard)
    - Data-driven variations (different inputs, locales, time zones where applicable)
 
 5. Refine the Existing specs/ Plan
@@ -120,7 +120,7 @@ Output Format
   - Title and revision info
   - Table of contents
   - Scenario sections with numbered steps and expected outcomes
-  You don't need permission to create files in specs/; just create or overwrite as needed.
+  You don't need permission to create or edit files in specs/; just create or overwrite as required.
 
 Example Scenario Template (to use when refining specs/)
 - Title: [Feature] – [Action/Outcome]
