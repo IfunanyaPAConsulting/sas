@@ -7,7 +7,7 @@ tools:
 handoffs:
   - label: Start Implementation
     agent: test-generator
-    prompt: The test generator can implement the test plan generated.
+    prompt: Generate the tests for all the scenarios detailed in the test plan created. 
     send: false
 
 ---
