@@ -30,7 +30,8 @@ export default defineConfig({
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
-      headless: true, // Always run browsers headlessly
+    // Run in headless mode unless HEADLESS env variable is set to 'false'
+    headless: process.env.HEADLESS !== 'false',
   },
 
   /* Configure projects for major browsers */

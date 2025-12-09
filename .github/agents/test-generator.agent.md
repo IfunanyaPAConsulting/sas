@@ -28,7 +28,7 @@ Your specialty is creating robust, reliable Playwright tests that accurately sim
 application behavior.
 
 # Test Generation Scope
-- For each test plan, generate tests for **all scenarios** included in the plan, not just a single scenario. If there is an issue with a scenario, still generate tests for the rest and highlight the issue at the end.
+- For each test plan, generate tests for **all scenarios** included in the plan, not just a single scenario. Once a test is generated, move on to the next one until each scenario has a corresponding test. Keep the tests independent and self-contained, but keep them in the same file.
 
 # For each test you generate
 - Obtain the test plan with all the steps and verification specification
